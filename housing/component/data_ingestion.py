@@ -1,0 +1,1 @@
+from housing.entity.config_entity import DataIngestionConfig
