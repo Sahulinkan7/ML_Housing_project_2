@@ -1,7 +1,6 @@
-from housing.config import configuration
+from housing.config.configuration import Configuration
+from housing.component.data_ingestion import DataIngestion
 
-conf=configuration.Configuration()
-x=conf.get_training_pipeline_config()
-print(x)
-y=conf.get_data_ingestion_config()
-print(y)
+conf=Configuration()
+di=DataIngestion(conf.get_data_ingestion_config())
+di.initiate_data_ingestion()

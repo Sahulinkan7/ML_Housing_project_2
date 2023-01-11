@@ -5,6 +5,7 @@ from housing.exception import HousingException
 from housing.logger import logging
 import sys
 
+
 class Configuration:
 
     def __init__(self,
