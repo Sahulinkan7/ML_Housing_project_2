@@ -79,6 +79,12 @@ MODEL_EVALUATION_CONFIG_KEY="model_evaluation_config"
 MODEL_EVALUATION_FILE_NAME_KEY="model_evaluation_file_name"
 MODEL_EVALUATION_ARTIFACT_DIR="model_evaluation_artifact_dir"
 
+BEST_MODEL_KEY="best_model"
+MODEL_PATH_KEY="model_path"
+HISTORY_KEY="history"
+
+
+
 
 
 
