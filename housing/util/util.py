@@ -61,7 +61,7 @@ def save_object(file_path:str , obj):
     except Exception as e:
         raise HousingException(e,sys) from e
 
-def load_obj(file_path:str):
+def load_object(file_path:str):
     """
     file_path: str
     """

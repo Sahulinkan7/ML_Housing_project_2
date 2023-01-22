@@ -65,4 +65,12 @@ MODEL_TRAINER_MODEL_CONFIG_DIR_KEY="model_config_dir"
 MODEL_TRAINER_MODEL_CONFIG_FILE_NAME_KEY="model_config_file_name"
 MODEL_TRAINER_ARTIFACT_DIR="model_trainer"
 
+#model factory related variables
+GRID_SEARCH_KEY="grid_search"
+MODULE_KEY="module"
+CLASS_KEY="class"
+PARAM_KEY="params"
+MODEL_SELECTION_KEY="model_selection"
+SEARCH_PARAM_GRID_KEY="search_param_grid"
+
 
