@@ -1,5 +1,5 @@
 from housing.entity.config_entity import (DataIngestionConfig,TrainingPipelineConfig,DataValidationConfig,
-DataTransformationConfig,ModelTrainerConfig)
+DataTransformationConfig,ModelTrainerConfig,ModelEvaluationConfig)
 from housing.util.util import read_yaml_file
 from housing.constant import *
 from housing.exception import HousingException
@@ -163,11 +163,31 @@ class Configuration:
         except Exception as e:
             raise HousingException(e,sys) from e
 
-    def get_model_evaluation_config(self):
-        pass
+    def get_model_evaluation_config(self)->ModelEvaluationConfig:
+        try:
+            artifact_dir=self.training_pipeline_config.artifact_dir
+            model_evaluation_artifact_dir=os.path.join(artifact_dir,MODEL_EVALUATION_ARTIFACT_DIR)
+
+            model_evaluation_config_info=self.config_info[MODEL_EVALUATION_CONFIG_KEY]
+
+            model_evaluation_file_path=os.path.join(model_evaluation_artifact_dir,model_evaluation_config_info[MODEL_EVALUATION_FILE_NAME_KEY])
+
+            model_evaluation_config=ModelEvaluationConfig(
+                model_evaluation_file_path=model_evaluation_file_path,
+                time_stamp=self.time_stamp
+            )
+
+            logging.info(f"Model Evaluation: {model_evaluation_config}")
+            return model_evaluation_config
+            
+        except Exception as e:
+            raise HousingException(e,sys) from e
 
     def model_pusher_config(self):
-        pass
+        try:
+            pass
+        except Exception as e:
+            raise HousingException(e,sys) from e
 
     def get_training_pipeline_config(self) -> TrainingPipelineConfig:
         try:

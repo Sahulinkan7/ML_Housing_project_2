@@ -40,7 +40,6 @@ class HousingEstimatorModel:
     def __str__(self):
         return f"{type(self.trained_model_object).__name__}()"
 
-    
 
 
 class ModelTrainer:
@@ -125,8 +124,6 @@ class ModelTrainer:
 #getting best model on training dataset
 #evaluation model on both training and testing dataset -> model_object
 #loading preprocessing object
-
 #custom model object by combining both preprocessing object and model object
 #saving custom model object
-
 #return model trainer artifact

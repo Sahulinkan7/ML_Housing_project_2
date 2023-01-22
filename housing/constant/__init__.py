@@ -73,4 +73,13 @@ PARAM_KEY="params"
 MODEL_SELECTION_KEY="model_selection"
 SEARCH_PARAM_GRID_KEY="search_param_grid"
 
+#model evaluation related variables
+
+MODEL_EVALUATION_CONFIG_KEY="model_evaluation_config"
+MODEL_EVALUATION_FILE_NAME_KEY="model_evaluation_file_name"
+MODEL_EVALUATION_ARTIFACT_DIR="model_evaluation_artifact_dir"
+
+
+
+
 
