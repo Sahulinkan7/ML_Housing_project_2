@@ -148,7 +148,7 @@ class Configuration:
             model_trainer_config_info[MODEL_TRAINER_TRAINED_MODEL_FILE_NAME_KEY])
 
             model_config_file_path=os.path.join(model_trainer_config_info[MODEL_TRAINER_MODEL_CONFIG_DIR_KEY],
-            MODEL_TRAINER_MODEL_CONFIG_FILE_NAME_KEY)
+            model_trainer_config_info[MODEL_TRAINER_MODEL_CONFIG_FILE_NAME_KEY])
 
             base_accuracy=model_trainer_config_info[MODEL_TRAINER_BASE_ACCURACY_KEY]
 
@@ -183,7 +183,7 @@ class Configuration:
         except Exception as e:
             raise HousingException(e,sys) from e
 
-    def model_pusher_config(self):
+    def get_model_pusher_config(self):
         try:
             time_stamp=f"{datetime.now().strftime('%Y%m%d%H%M%S')}"
             model_pusher_config_info=self.config_info[MODEL_PUSHER_CONFIG_KEY]

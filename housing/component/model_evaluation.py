@@ -8,7 +8,7 @@ from housing.entity.config_entity import ModelEvaluationConfig
 from housing.entity.artifact_entity import DataIngestionArtifact,DataValidationArtifact,ModelTrainerArtifact,ModelEvaluationArtifact
 from housing.entity.model_factory import evaluate_regression_model,MetricInfoArtifact
 
-class Model_Evaluation:
+class ModelEvaluation:
     def __init__(self,model_evaluation_config:ModelEvaluationConfig,
                  data_ingestion_artifact: DataIngestionArtifact,
                  data_validation_artifact: DataValidationArtifact,

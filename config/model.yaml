@@ -16,7 +16,7 @@ model_selection:
         - true
         - false
   module_1:
-    class: RandomForestRAegressor
+    class: RandomForestRegressor
     module: sklearn.ensemble
     params:
       min_samples_leaf: 3

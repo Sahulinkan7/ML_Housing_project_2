@@ -46,7 +46,7 @@ class ModelTrainer:
 
     def __init__(self,model_trainer_config:ModelTrainerConfig,data_transformation_artifact:DataTransformationArtifact):
         try:
-            logging.ifo(f"{'>>'*30} Model Trainer log started {'<<'*30}")
+            logging.info(f"{'>>'*30} Model Trainer log started {'<<'*30}")
             self.model_trainer_config=model_trainer_config
             self.data_transformation_artifact=data_transformation_artifact
         except Exception as e:
