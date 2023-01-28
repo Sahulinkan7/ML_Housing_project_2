@@ -2,7 +2,7 @@ from housing.config.configuration import Configuration
 from housing.component.data_ingestion import DataIngestion
 from housing.exception import HousingException
 from housing.component.data_transformation import DataTransformation
-import sys
+import os,sys
 from housing.logger import logging
 from housing.pipeline.pipeline import Pipeline
 
@@ -16,9 +16,11 @@ def main():
         # print(df.dtypes)
         # print(df.shape)
 
-        pipeline=Pipeline()
-        pipeline.run_pipeline()
-        
+        config_path = os.path.join("config","config.yaml")
+        pipeline = Pipeline(Configuration(config_file_path=config_path))
+        #pipeline.run_pipeline()
+        pipeline.start()
+        logging.info("main function execution completed.")
     except Exception as e:
         logging.error(f"{e}")
         print(e)
